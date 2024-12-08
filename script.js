@@ -2,21 +2,22 @@
 document.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('.page');
     const navLinks = document.querySelectorAll('.side-nav a');
-    let currentIndex = 0;
 
-    sections.forEach((section, i) => {
+    let currentSectionId = '';
+    sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        // 当section的顶部在视口内时，高亮相应链接
+        // 检测此Section的顶部是否在当前视口中（如rect.top位于0到一屏高度内）
         if(rect.top >= 0 && rect.top < window.innerHeight) {
-            currentIndex = i;
+            currentSectionId = section.id;
         }
     });
 
-    navLinks.forEach((link, i) => {
-        if(i === currentIndex) {
-            link.style.color = "red";
-        } else {
-            link.style.color = "#333";
+    navLinks.forEach((link) => {
+        // 移除所有链接的active状态
+        link.classList.remove('active');
+        // 如果链接的data-section与当前section的id相同，则高亮
+        if (link.dataset.section === currentSectionId) {
+            link.classList.add('active');
         }
     });
 });
@@ -26,7 +27,7 @@ document.addEventListener('keydown', (e) => {
     const sections = document.querySelectorAll('.page');
     const sectionCount = sections.length;
 
-    // 找到当前处于视口的section序号
+    // find the section
     let currentIndex = 0;
     sections.forEach((section, i) => {
         const rect = section.getBoundingClientRect();
@@ -35,9 +36,7 @@ document.addEventListener('keydown', (e) => {
         }
     });
 
-    // 根据按键决定翻页方向
-    // 空格键（keyCode=32）、向下键（keyCode=40）都触发下一页
-    // 向上键（keyCode=38）触发上一页
+    //Keyborad event: space and up and down
     if ((e.key === ' ' || e.key === 'ArrowDown') && currentIndex < sectionCount - 1) {
         sections[currentIndex + 1].scrollIntoView({ behavior: 'smooth' });
     } else if (e.key === 'ArrowUp' && currentIndex > 0) {
