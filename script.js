@@ -38,12 +38,10 @@ document.addEventListener('keydown', (e) => {
     // 根据按键决定翻页方向
     // 空格键（keyCode=32）、向下键（keyCode=40）都触发下一页
     // 向上键（keyCode=38）触发上一页
-    if ((e.keyCode === 32 || e.keyCode === 40) && currentIndex < sectionCount - 1) {
-        // 下一页
-        sections[currentIndex + 1].scrollIntoView({ behavior: "smooth" });
-    } else if (e.keyCode === 38 && currentIndex > 0) {
-        // 上一页
-        sections[currentIndex - 1].scrollIntoView({ behavior: "smooth" });
+    if ((e.key === ' ' || e.key === 'ArrowDown') && currentIndex < sectionCount - 1) {
+        sections[currentIndex + 1].scrollIntoView({ behavior: 'smooth' });
+    } else if (e.key === 'ArrowUp' && currentIndex > 0) {
+        sections[currentIndex - 1].scrollIntoView({ behavior: 'smooth' });
     }
 });
 
