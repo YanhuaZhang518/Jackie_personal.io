@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>My Resume</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Hello World</h1>
-    <h2>My name is Jackie</h2>
+    <!-- Left nav bar -->
+    <nav class="side-nav">
+        <ul>
+            <li><a href="#page1">Home</a></li>
+            <li><a href="#page2">Education & Projects</a></li>
+            <li><a href="#page3">Contact</a></li>
+        </ul>
+    </nav>
 
+    <!-- main -->
+    <div class="container">
+        <!-- Page 1: name -->
+        <section class="page" id="page1">
+            <div class="content">
+                <h1>Your Name</h1>
+                <p>Welcome to my personal website.</p>
+            </div>
+        </section>
+
+        <!-- Page 2: Education and Project -->
+        <section class="page" id="page2">
+            <div class="content">
+                <h2>Education</h2>
+                <ul>
+                    <li>B.S. in XXX, University of XXX</li>
+                    <li>M.S. in XXX, University of XXX</li>
+                </ul>
+
+                <h2>Projects</h2>
+                <ul>
+                    <li>Project A: 简短描述</li>
+                    <li>Project B: 简短描述</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Page 3: connect -->
+        <section class="page" id="page3">
+            <div class="content">
+                <h2>Contact Me</h2>
+                <p>Email: your.email@example.com</p>
+                <p>LinkedIn: <a href="#" target="_blank">YourLinkedIn</a></p>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
