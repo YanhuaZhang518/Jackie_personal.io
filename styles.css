@@ -23,14 +23,10 @@ html, body {
     padding: 20px;
 }
 
-#page1 {
-    background: #c42323;
-}
-#page2 {
-    background: #c42323;
-}
-#page3 {
-    background: #c42323;
+.page {
+    background: url('images/pexels-felixmittermeier-956999.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
 }
 
 .content {
