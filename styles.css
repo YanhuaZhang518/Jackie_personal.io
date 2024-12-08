@@ -25,13 +25,13 @@ html, body {
 
 /* 简单区分下三页的背景色（可自由修改） */
 #page1 {
-    background: #f3f3f3;
+    background: #ffffff;
 }
 #page2 {
-    background: #e0f7fa;
+    background: #ffffff;
 }
 #page3 {
-    background: #fffde7;
+    background: #ffffff;
 }
 
 .content {
