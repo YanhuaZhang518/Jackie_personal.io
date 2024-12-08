@@ -20,3 +20,30 @@ document.addEventListener('scroll', () => {
         }
     });
 });
+
+document.addEventListener('keydown', (e) => {
+    const container = document.querySelector('.container');
+    const sections = document.querySelectorAll('.page');
+    const sectionCount = sections.length;
+
+    // 找到当前处于视口的section序号
+    let currentIndex = 0;
+    sections.forEach((section, i) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top >= 0 && rect.top < window.innerHeight) {
+            currentIndex = i;
+        }
+    });
+
+    // 根据按键决定翻页方向
+    // 空格键（keyCode=32）、向下键（keyCode=40）都触发下一页
+    // 向上键（keyCode=38）触发上一页
+    if ((e.keyCode === 32 || e.keyCode === 40) && currentIndex < sectionCount - 1) {
+        // 下一页
+        sections[currentIndex + 1].scrollIntoView({ behavior: "smooth" });
+    } else if (e.keyCode === 38 && currentIndex > 0) {
+        // 上一页
+        sections[currentIndex - 1].scrollIntoView({ behavior: "smooth" });
+    }
+});
+
