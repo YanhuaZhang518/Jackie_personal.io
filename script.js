@@ -1,4 +1,4 @@
-// 简单示例：根据滚动位置高亮当前导航
+// Based on scroll page to highlight the area
 document.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('.page');
     const navLinks = document.querySelectorAll('.side-nav a');
