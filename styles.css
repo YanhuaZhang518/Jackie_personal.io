@@ -24,9 +24,9 @@ html, body {
 }
 
 .page {
-    
+    background: url('images/pexels-felixmittermeier-956999.jpg') no-repeat center center;
     background-size: cover;
-    color: #000000;
+    color: #fff; 
 }
 
 .content {
