@@ -21,9 +21,6 @@ html, body {
     scroll-snap-align: start; /* 每个section对齐顶部 */
     box-sizing: border-box;
     padding: 20px;
-}
-
-.page {
     background: url('pexels-felixmittermeier-956999.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fff; 
@@ -70,6 +67,7 @@ html, body {
     text-align: center;
     line-height: 50px;
     transition: background 0.3s;
+    text-decoration: none; /* 去掉下划线 */
 }
 
 .side-nav img {
@@ -77,25 +75,12 @@ html, body {
     height: 20px;
 }
 
-/* 悬停效果 */
+/* 鼠标悬停时变浅色，但鼠标移开后恢复 */
 .side-nav li:hover {
-    background: #e9e6e6; 
+    background: #e9e6e6;
 }
 
-/* 选中（active）状态颜色：橙色 */
-.side-nav a.active,
-.side-nav li:hover a.active {
+/* 当前激活页面的导航项为蓝色浅色背景 */
+.side-nav a.active {
     background: rgb(145, 234, 254);
-}
-
-/* 如果想在hover时整个li变色，将active类直接放到li上也可：
-   <li class="active"><a ...>...</a></li> 
-   然后用 .side-nav li.active { background: orange; } 实现。 */
-
-/* 如果想让橙色在li本身，而不是a上，则修改为 */
-.side-nav li.active {
-    background:  rgb(145, 234, 254);
-}
-.side-nav li.active a {
-    background: transparent; /* 保持内部透明 */
 }
