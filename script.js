@@ -13,10 +13,9 @@ document.addEventListener('scroll', () => {
 
     navLinks.forEach((link) => {
         // 移除所有链接的active状态
-        link.classList.remove('active');
-        // 如果链接的data-section与当前section的id相同，则高亮
-        if (link.dataset.section === currentSectionId) {
-            link.classList.add('active');
+        link.classList.remove('active'); // 先移除所有active
+        if (link.getAttribute('href') === `#${currentSectionId}`) {
+            link.classList.add('active'); // 为当前页面对应的链接添加active
         }
     });
 });
