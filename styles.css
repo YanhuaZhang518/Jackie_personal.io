@@ -37,8 +37,7 @@ html, body {
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    background: #1e1e1e; /* 整体背景，可选 */
-    border-radius: 8px;
+    background:  transparent;
     padding: 5px 0;
     z-index: 100;
 }
@@ -50,10 +49,10 @@ html, body {
 }
 
 .side-nav li {
-    margin: 10px 0;
+    margin: 5px 0;
     width: 50px;
     height: 50px;
-    background: #2a2a2a; /* 默认背景颜色 */
+    background: #cbcaca; /* 默认背景颜色 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,6 +67,7 @@ html, body {
     line-height: 50px;
     transition: background 0.3s;
     text-decoration: none; /* 去掉下划线 */
+    background: transparent;
 }
 
 .side-nav img {
