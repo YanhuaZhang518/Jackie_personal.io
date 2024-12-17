@@ -32,7 +32,6 @@ html, body {
 }
 
 /* 侧边导航栏 */
-
 .side-nav {
     position: fixed;
     left: 10px;
@@ -54,12 +53,11 @@ html, body {
     margin: 5px 0;
     width: 50px;
     height: 50px;
-    /* 移除背景，完全透明 */
-    background: none;
+    background: none; /* 默认背景颜色 */
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0; /* 可根据需要取消圆角 */
+    border-radius: 0; /* 圆角 */
 }
 
 .side-nav a {
@@ -69,16 +67,21 @@ html, body {
     text-align: center;
     line-height: 50px;
     transition: background 0.3s;
-    /* 同样去掉背景 */
-    background: none;
+    background: transparent;
 }
 
-/* Hover时如果不需要变色，可以不加背景 */
+.side-nav img {
+    width: 20px;
+    height: 20px;
+}
+
+/* 鼠标悬停时变浅色，但鼠标移开后恢复 */
 .side-nav li:hover {
-    background: none;
+    background: #e9e6e6;
 }
 
-/* Active状态去掉背景，或者给一个极轻微的背景，用于区分 */
+/* 当前激活页面的导航项为蓝色浅色背景 */
 .side-nav a.active {
-    background: none;
+    background: rgb(145, 234, 254);
 }
+
