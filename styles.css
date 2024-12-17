@@ -53,7 +53,7 @@ html, body {
     margin: 5px 0;
     width: 50px;
     height: 50px;
-    background: none; /* 默认背景颜色 */
+    background: rgb(156, 156, 158); /* 默认背景颜色 */
     display: flex;
     justify-content: center;
     align-items: center;
