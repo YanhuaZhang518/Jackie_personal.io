@@ -32,13 +32,15 @@ html, body {
 }
 
 /* 侧边导航栏 */
+
 .side-nav {
     position: fixed;
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    background:  transparent;
-    padding: 5px 0;
+    /* 去掉任何背景色，确保是透明 */
+    background: none;
+    padding: 0;
     z-index: 100;
 }
 
@@ -52,35 +54,31 @@ html, body {
     margin: 5px 0;
     width: 50px;
     height: 50px;
-    background: #cbcaca; /* 默认背景颜色 */
+    /* 移除背景，完全透明 */
+    background: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 8px; /* 圆角 */
+    border-radius: 0; /* 可根据需要取消圆角 */
 }
 
 .side-nav a {
-    display: inline-block;
+    display: block;
     width: 100%;
     height: 100%;
     text-align: center;
     line-height: 50px;
     transition: background 0.3s;
-    text-decoration: none; /* 去掉下划线 */
-    background: transparent;
+    /* 同样去掉背景 */
+    background: none;
 }
 
-.side-nav img {
-    width: 20px;
-    height: 20px;
-}
-
-/* 鼠标悬停时变浅色，但鼠标移开后恢复 */
+/* Hover时如果不需要变色，可以不加背景 */
 .side-nav li:hover {
-    background: #e9e6e6;
+    background: none;
 }
 
-/* 当前激活页面的导航项为蓝色浅色背景 */
+/* Active状态去掉背景，或者给一个极轻微的背景，用于区分 */
 .side-nav a.active {
-    background: rgb(145, 234, 254);
+    background: none;
 }
