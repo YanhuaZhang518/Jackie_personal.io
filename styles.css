@@ -84,24 +84,3 @@ html, body {
 .side-nav a.active {
     background: rgb(145, 234, 254);
 }
-
-.side-nav li:nth-child(1) {
-    /* 放在半圆的左上方（-90度位置） */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg) translateX(80px) rotate(90deg);
-}
-
-.side-nav li:nth-child(2) {
-    /* 放在半圆正上方（0度位置） */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0deg) translateX(80px) rotate(0deg);
-}
-
-.side-nav li:nth-child(3) {
-    /* 放在半圆的右上方（90度位置） */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(90deg) translateX(80px) rotate(-90deg);
-}
